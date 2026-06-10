@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: mart_trending_topics
+    description: "Final mart: top 10 trending hashtags with engagement tier and viral rate"
+    columns:
+      - name: rank
+        description: "Trending rank (1 = most mentioned)"
+        tests:
+          - not_null
+      - name: engagement_tier
+        description: "HOT / TRENDING / ACTIVE / NORMAL"
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['HOT', 'TRENDING', 'ACTIVE', 'NORMAL']

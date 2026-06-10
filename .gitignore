@@ -1,0 +1,13 @@
+venv/
+dbt_venv/
+airflow_venv/
+data/
+__pycache__/
+*.pyc
+.ivy2/
+airflow/airflow.db
+airflow/logs/
+dbt/target/
+dbt/dbt_packages/
+*.egg-info/
+.DS_Store

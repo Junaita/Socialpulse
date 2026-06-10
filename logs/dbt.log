@@ -1,0 +1,83 @@
+[0m23:12:01.675857 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1078450a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108a60220>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108a60550>]}
+
+
+============================== 23:12:01.683622 | dae41361-99f4-491d-8437-4795bd54ee70 ==============================
+[0m23:12:01.683622 [info ] [MainThread]: Running with dbt=1.10.22
+[0m23:12:01.684592 [debug] [MainThread]: running dbt with arguments {'warn_error': 'None', 'debug': 'False', 'printer_width': '80', 'use_experimental_parser': 'False', 'log_path': 'logs', 'no_print': 'None', 'cache_selected_only': 'False', 'indirect_selection': 'eager', 'empty': 'None', 'use_colors': 'True', 'write_json': 'True', 'log_cache_events': 'False', 'introspect': 'True', 'profiles_dir': '/Users/juneadhi/.dbt', 'quiet': 'False', 'fail_fast': 'False', 'send_anonymous_usage_stats': 'True', 'version_check': 'True', 'static_parser': 'True', 'partial_parse': 'True', 'invocation_command': 'dbt init socialpulse_dbt', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_format': 'default'}
+[0m23:12:01.700413 [info ] [MainThread]: Creating dbt configuration folder at /Users/juneadhi/.dbt
+[0m23:12:01.702384 [debug] [MainThread]: Starter project path: /Users/juneadhi/socialpulse/venv/lib/python3.9/site-packages/dbt/include/starter_project
+[0m23:12:01.709840 [info ] [MainThread]: 
+Your new dbt project "socialpulse_dbt" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m23:12:01.710570 [info ] [MainThread]: Setting up your profile.
+[0m23:12:39.590486 [error] [MainThread]: Encountered an error:
+
+[0m23:12:39.606931 [error] [MainThread]: Traceback (most recent call last):
+  File "/Users/juneadhi/socialpulse/venv/lib/python3.9/site-packages/dbt/cli/requires.py", line 178, in wrapper
+    result, success = func(*args, **kwargs)
+  File "/Users/juneadhi/socialpulse/venv/lib/python3.9/site-packages/dbt/cli/requires.py", line 128, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/juneadhi/socialpulse/venv/lib/python3.9/site-packages/dbt/cli/main.py", line 483, in init
+    results = task.run()
+  File "/Users/juneadhi/socialpulse/venv/lib/python3.9/site-packages/dbt/task/init.py", line 346, in run
+    self.setup_profile(profile_name)
+  File "/Users/juneadhi/socialpulse/venv/lib/python3.9/site-packages/dbt/task/init.py", line 262, in setup_profile
+    self.create_profile_from_target(adapter, profile_name=profile_name)
+  File "/Users/juneadhi/socialpulse/venv/lib/python3.9/site-packages/dbt/task/init.py", line 179, in create_profile_from_target
+    self.create_profile_from_profile_template(profile_template, profile_name)
+  File "/Users/juneadhi/socialpulse/venv/lib/python3.9/site-packages/dbt/task/init.py", line 163, in create_profile_from_profile_template
+    target = self.generate_target_from_input(prompts, initial_target)
+  File "/Users/juneadhi/socialpulse/venv/lib/python3.9/site-packages/dbt/task/init.py", line 129, in generate_target_from_input
+    target[key] = click.prompt(
+  File "/Users/juneadhi/socialpulse/venv/lib/python3.9/site-packages/click/termui.py", line 164, in prompt
+    value = prompt_func(prompt)
+  File "/Users/juneadhi/socialpulse/venv/lib/python3.9/site-packages/click/termui.py", line 147, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m23:12:39.610942 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": false, "command_wall_clock_time": 38.127438, "process_in_blocks": "0", "process_kernel_time": 0.351764, "process_mem_max_rss": "101695488", "process_out_blocks": "0", "process_user_time": 1.985933}
+[0m23:12:39.611543 [debug] [MainThread]: Command `dbt init` failed at 23:12:39.611417 after 38.13 seconds
+[0m23:12:39.611962 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1078450a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108f3cb80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108f3caf0>]}
+[0m23:12:39.612389 [debug] [MainThread]: Flushing usage events
+[0m23:12:40.045853 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:12:50.517354 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1037bedf0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104c4e940>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104c4ec70>]}
+
+
+============================== 23:12:50.522958 | 4f4c1ce8-51f4-4c9b-bf35-fa97401d4361 ==============================
+[0m23:12:50.522958 [info ] [MainThread]: Running with dbt=1.10.22
+[0m23:12:50.523789 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'quiet': 'False', 'static_parser': 'True', 'introspect': 'True', 'empty': 'None', 'write_json': 'True', 'no_print': 'None', 'cache_selected_only': 'False', 'invocation_command': 'dbt init socialpulse_dbt', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'use_experimental_parser': 'False', 'use_colors': 'True', 'log_format': 'default', 'partial_parse': 'True', 'warn_error': 'None', 'indirect_selection': 'eager', 'target_path': 'None', 'printer_width': '80', 'fail_fast': 'False', 'send_anonymous_usage_stats': 'True', 'profiles_dir': '/Users/juneadhi/.dbt', 'log_cache_events': 'False', 'debug': 'False', 'log_path': 'logs'}
+[0m23:12:50.543006 [info ] [MainThread]: A project called socialpulse_dbt already exists here.
+[0m23:12:50.546288 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 0.16103, "process_in_blocks": "0", "process_kernel_time": 0.201227, "process_mem_max_rss": "101171200", "process_out_blocks": "0", "process_user_time": 1.61639}
+[0m23:12:50.546823 [debug] [MainThread]: Command `dbt init` succeeded at 23:12:50.546702 after 0.16 seconds
+[0m23:12:50.547250 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1037bedf0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104bc2a00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104c2d670>]}
+[0m23:12:50.547697 [debug] [MainThread]: Flushing usage events
+[0m23:12:50.799568 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:24:17.666680 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107e8ee20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11175e160>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11175e490>]}
+
+
+============================== 23:24:17.672049 | d8423145-75db-4846-9bcb-74b5b9dfff8a ==============================
+[0m23:24:17.672049 [info ] [MainThread]: Running with dbt=1.10.22
+[0m23:24:17.672745 [debug] [MainThread]: running dbt with arguments {'warn_error': 'None', 'log_format': 'default', 'printer_width': '80', 'debug': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt run', 'use_colors': 'True', 'send_anonymous_usage_stats': 'True', 'write_json': 'True', 'introspect': 'True', 'use_experimental_parser': 'False', 'partial_parse': 'True', 'log_cache_events': 'False', 'no_print': 'None', 'empty': 'False', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'logs', 'target_path': 'None', 'quiet': 'False', 'cache_selected_only': 'False', 'static_parser': 'True', 'profiles_dir': '/Users/juneadhi/.dbt', 'indirect_selection': 'eager'}
+[0m23:24:17.673476 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /Users/juneadhi/socialpulse/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m23:24:17.676368 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.12872542, "process_in_blocks": "0", "process_kernel_time": 0.208258, "process_mem_max_rss": "100925440", "process_out_blocks": "0", "process_user_time": 1.494359}
+[0m23:24:17.676899 [debug] [MainThread]: Command `dbt run` failed at 23:24:17.676782 after 0.13 seconds
+[0m23:24:17.677322 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107e8ee20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11175ec70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11175ed30>]}
+[0m23:24:17.677756 [debug] [MainThread]: Flushing usage events
+[0m23:24:18.384245 [debug] [MainThread]: An error was encountered while trying to flush usage events

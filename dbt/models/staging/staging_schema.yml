@@ -1,0 +1,43 @@
+version: 2
+
+sources:
+  - name: socialpulse
+    database: socialpulse
+    schema: public
+    tables:
+      - name: raw_top_hashtags
+        description: "Raw top hashtags loaded from Gold Delta Lake layer"
+      - name: raw_user_engagement
+        description: "Raw user engagement scores from Gold Delta Lake layer"
+      - name: raw_hourly_trends
+        description: "Raw hourly event trends from Gold Delta Lake layer"
+
+models:
+  - name: stg_top_hashtags
+    description: "Staged hashtag data with clean column names"
+    columns:
+      - name: hashtag
+        description: "Hashtag name"
+        tests:
+          - not_null
+          - unique
+      - name: total_mentions
+        description: "Total number of times hashtag was mentioned"
+        tests:
+          - not_null
+      - name: rank
+        description: "Rank by total mentions"
+        tests:
+          - not_null
+
+  - name: stg_user_engagement
+    description: "Staged user engagement data"
+    columns:
+      - name: user_id
+        description: "Unique user identifier"
+        tests:
+          - not_null
+      - name: username
+        description: "User's username"
+        tests:
+          - not_null
